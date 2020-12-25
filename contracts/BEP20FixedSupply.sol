@@ -350,13 +350,13 @@ contract BEP20FixedSupply is Context, iBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = 'Token Name';
-    _symbol = 'TKN';
+    _name = 'BEP2';
+    _symbol = 'BEP2';
     _decimals = 18;
     _totalSupply = 1*10**8 * 10**18; //100m
-    _balances[msg.sender] = _totalSupply;
+    _balances[msg.sender] = _BEP2;
 
-    emit Transfer(address(0), msg.sender, _totalSupply);
+    emit Transfer(address(0), msg.sender, _BEP2);
   }
 
   /**
